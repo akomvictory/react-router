@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+
 
 
 class Home extends Component{
@@ -19,30 +20,34 @@ componentDidMount(){
   })
   
 }
-    render(){
-        const { posts } = this.state
-        const postList = posts.length ? (
-          posts.map(post => {
-            <li>
+ 
+render(){
+    const { posts } = this.state
+    const postList = posts.length ? (
+      posts.map(post => {
+        return (
+            <li key={post.id}>
                 <div className="collapsible-header">
                 <i className="material-icons">filter_drama</i>
                 {post.title}
-                <span className="new badge" key={post.id}></span></div>
+                <span className="new badge"></span></div>
                 <div className="collapsible-body"><p>{post.body}</p></div>
             </li>
-           })
-        ) : (
-            <div className="center"> No post where found </div>
         )
-        return(
-            <div className="container">
-                <ul className="collapsible">
-                  
-                    {postList}
-                </ul>
-            </div>
-        )
-    }
+      })
+    ) : (
+      <div className="center">No posts to show</div>
+    );
+
+    return (
+      <div>
+        <div className="container">
+          <h4 className="center">Home</h4>
+          {postList}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Home

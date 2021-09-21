@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
-    
-        return(
+    return(
             <div>
                 <nav>
                   <div className="nav-wrapper">
-                        <Link to="/Home"> Reacta </Link>
+                        <Link to="/"> Reacta </Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                       <li> <Link to="/"> About  </Link> </li>
+                       <li> <Link to="/About"> About  </Link> </li>
                        <li>  <Link to="/resource">  Resource </Link> </li> 
                        <li>  <Link to="/contact"> Contact </Link> </li> 
                         </ul>
