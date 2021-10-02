@@ -9,7 +9,7 @@ const Navbar = () => {
                   <div className="nav-wrapper">
                         <Link to="/"> Reacta </Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                       <li> <Link to="/About"> About  </Link> </li>
+                       <li> <Link to="/about"> About  </Link> </li>
                        <li>  <Link to="/resource">  Resource </Link> </li> 
                        <li>  <Link to="/contact"> Contact </Link> </li> 
                         </ul>

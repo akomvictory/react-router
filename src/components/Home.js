@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,9 +29,13 @@ render(){
         return (
             <li key={post.id}>
                 <div className="collapsible-header">
-                <i className="material-icons">filter_drama</i>
-                {post.title}
-                <span className="new badge"></span></div>
+                <i className="material-icons"></i>
+               
+                <Link to={'/' + post.id}>  
+                {post.title}  &nbsp;&nbsp;
+                <span className="new badge"> </span> 
+                </Link>
+                </div>
                 <div className="collapsible-body"><p>{post.body}</p></div>
             </li>
         )
@@ -43,7 +48,9 @@ render(){
       <div>
         <div className="container">
           <h4 className="center">Home</h4>
+          <ul class="collapsible">
           {postList}
+          </ul>
         </div>
       </div>
     )
